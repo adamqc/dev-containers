@@ -37,7 +37,7 @@ RUN cd /opt/spack-environment && spack env activate . && spack install --fail-fa
 RUN find -L /opt/views/view/* -type f -exec readlink -f '{}' \; | \
     xargs file -i | \
     grep 'charset=binary' | \
-    grep 'x-executable\|x-archive\|x-sharedlib' | \
+    grep 'x-executable\|x-sharedlib' | \
     awk -F: '{print $1}' | xargs strip
 
 # Modifications to the environment that are necessary to run
@@ -66,6 +66,11 @@ RUN { \
 RUN apt-get -yqq update && apt-get -yqq upgrade \
  && apt-get -yqq install build-essential clangd clang-format curl gfortran git libc6-dbg vim \
  && rm -rf /var/lib/apt/lists/*
+
+RUN sed -i 's|/opt/spack/lib/spack/env/gcc/||g' /opt/view/lib/cmake/deal.II/deal.IIConfig.cmake
+RUN . /opt/spack-environment/activate.sh && python -m ensurepip && python -m pip install autopep8 scipy numpy matplotlib pandas -i https://pypi.org/simple && rm -rf /root/.cache
+RUN sh -c "$(curl -L https://raw.githubusercontent.com/deluan/zsh-in-docker/master/zsh-in-docker.sh)" -- -t robbyrussell -p vi-mode
+
 ENTRYPOINT [ "/entrypoint.sh" ]
 CMD [ "/bin/bash" ]
 
