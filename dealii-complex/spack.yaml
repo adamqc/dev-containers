@@ -5,7 +5,7 @@ spack:
   - eigen
   - python@3.10.13
   - mumps+mpi+metis+parmetis
-  - mpich@:4.2 datatype-engine=dataloop
+  - mpich@:4.1.99 datatype-engine=dataloop
   - petsc+mumps+superlu-dist+complex~hdf5
   - tetgen
   - nanoflann
