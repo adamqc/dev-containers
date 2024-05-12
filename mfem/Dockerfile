@@ -11,7 +11,7 @@ set -o noclobber \
 &&   echo '  - python@3.10.13' \
 &&   echo '  - mfem@develop+mpi+petsc+suite-sparse+superlu-dist+shared~static' \
 &&   echo '  - mumps+mpi+metis+parmetis' \
-&&   echo '  - mpich datatype-engine=dataloop' \
+&&   echo '  - mpich@:4.2 datatype-engine=dataloop' \
 &&   echo '  - petsc+hypre+mumps+superlu-dist~hdf5' \
 &&   echo '  - tetgen' \
 &&   echo '  - valgrind' \

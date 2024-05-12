@@ -13,7 +13,7 @@ set -o noclobber \
 &&   echo '  - eigen' \
 &&   echo '  - python@3.10.13' \
 &&   echo '  - mumps+mpi+metis+parmetis' \
-&&   echo '  - mpich datatype-engine=dataloop' \
+&&   echo '  - mpich@:4.2 datatype-engine=dataloop' \
 &&   echo '  - petsc+mumps+superlu-dist+complex~hdf5' \
 &&   echo '  - tetgen' \
 &&   echo '  - nanoflann' \

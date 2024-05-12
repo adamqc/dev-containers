@@ -3,7 +3,7 @@ spack:
   - python@3.10.13
   - mfem@develop+mpi+petsc+suite-sparse+superlu-dist+shared~static
   - mumps+mpi+metis+parmetis
-  - mpich datatype-engine=dataloop
+  - mpich@:4.2 datatype-engine=dataloop
   - petsc+hypre+mumps+superlu-dist~hdf5
   - tetgen
   - valgrind
