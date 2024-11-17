@@ -1,7 +1,7 @@
 spack:
   specs:
   - python@3.10.14
-  - mfem@develop+mpi+petsc+suite-sparse+superlu-dist+shared~static
+  - mfem@develop+mpi+petsc+mumps+suite-sparse+superlu-dist+shared~static
   - mumps+mpi+metis+parmetis
   - mpich@:4.1.99 datatype-engine=dataloop
   - petsc+hypre+mumps+superlu-dist~hdf5
