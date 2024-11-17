@@ -1,9 +1,9 @@
 spack:
   specs:
   - cmake
-  - dealii@master+mpi+petsc+p4est+python+trilinos~hdf5~gmsh~sundials~oce~cgal~assimp~symengine~examples~ginkgo~threads~vtk
+  - dealii@master+complex+mpi+petsc+p4est+python+trilinos~hdf5~gmsh~sundials~oce~cgal~assimp~symengine~examples~ginkgo~threads~vtk~opencascade
   - eigen
-  - python@3.10.13
+  - python@3.10.14
   - mumps+mpi+metis+parmetis
   - mpich@:4.1.99 datatype-engine=dataloop
   - petsc+mumps+superlu-dist+complex~hdf5

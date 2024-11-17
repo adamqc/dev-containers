@@ -1,5 +1,5 @@
 # Build stage with Spack pre-installed and ready to be used
-FROM spack/ubuntu-jammy:develop as builder
+FROM spack/ubuntu-jammy:develop AS builder
 
 
 # What we want to install and how we want to install it
@@ -9,16 +9,15 @@ set -o noclobber \
 &&  (echo spack: \
 &&   echo '  specs:' \
 &&   echo '  - cmake' \
-&&   echo '  - dealii@master+mpi+petsc+p4est+python+trilinos~hdf5~gmsh~sundials~oce~cgal~assimp~symengine~examples~ginkgo~threads~vtk' \
+&&   echo '  - dealii@master+complex+mpi+petsc+p4est+python+trilinos~hdf5~gmsh~sundials~oce~cgal~assimp~symengine~examples~ginkgo~threads~vtk~opencascade' \
 &&   echo '  - eigen' \
-&&   echo '  - python@3.10.13' \
+&&   echo '  - python@3.10.14' \
 &&   echo '  - mumps+mpi+metis+parmetis' \
 &&   echo '  - mpich@:4.1.99 datatype-engine=dataloop' \
 &&   echo '  - petsc+hypre+mumps+superlu-dist~hdf5' \
 &&   echo '  - tetgen' \
 &&   echo '  - nanoflann' \
 &&   echo '  - valgrind' \
-&&   echo '' \
 &&   echo '  packages:' \
 &&   echo '    all:' \
 &&   echo '      target:' \
