@@ -15,6 +15,7 @@ set -o noclobber \
 &&   echo '  - mumps+mpi+metis+parmetis' \
 &&   echo '  - mpich@:4.1.99 datatype-engine=dataloop' \
 &&   echo '  - petsc+hypre+mumps+superlu-dist~hdf5' \
+&&   echo '  - taskflow@master' \
 &&   echo '  - tetgen' \
 &&   echo '  - nanoflann' \
 &&   echo '  - valgrind' \
