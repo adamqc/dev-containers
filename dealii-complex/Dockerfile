@@ -11,7 +11,7 @@ set -o noclobber \
 &&   echo '  - cmake' \
 &&   echo '  - dealii@master+complex+mpi+petsc+p4est+python+trilinos~hdf5~gmsh~sundials~oce~cgal~assimp~symengine~examples~ginkgo~threads~vtk~opencascade' \
 &&   echo '  - eigen' \
-&&   echo '  - python@3.10.14' \
+&&   echo '  - python@3.10.16' \
 &&   echo '  - mumps+mpi+metis+parmetis' \
 &&   echo '  - mpich@:4.1.99 datatype-engine=dataloop' \
 &&   echo '  - petsc+mumps+superlu-dist+complex~hdf5' \

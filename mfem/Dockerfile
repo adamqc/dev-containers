@@ -8,7 +8,7 @@ RUN mkdir -p /opt/spack-environment && \
 set -o noclobber \
 &&  (echo spack: \
 &&   echo '  specs:' \
-&&   echo '  - python@3.10.14' \
+&&   echo '  - python@3.10.16' \
 &&   echo '  - mfem@develop+mpi+petsc+mumps+suite-sparse+superlu-dist+gslib+shared~static' \
 &&   echo '  - mumps+mpi+metis+parmetis' \
 &&   echo '  - mpich@:4.1.99 datatype-engine=dataloop' \

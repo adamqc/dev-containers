@@ -1,6 +1,6 @@
 spack:
   specs:
-  - python@3.10.14
+  - python@3.10.16
   - mfem@develop+mpi+petsc+mumps+suite-sparse+superlu-dist+gslib+shared~static
   - mumps+mpi+metis+parmetis
   - mpich@:4.1.99 datatype-engine=dataloop
