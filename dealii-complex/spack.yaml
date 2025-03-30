@@ -3,7 +3,7 @@ spack:
   - cmake
   - dealii@master+complex+mpi+petsc+p4est+python+trilinos~hdf5~gmsh~sundials~oce~cgal~assimp~symengine~examples~ginkgo~threads~vtk~opencascade
   - eigen
-  - python@3.10.16
+  - python@:3.10.99
   - mumps+mpi+metis+parmetis
   - mpich@:4.1.99 datatype-engine=dataloop
   - petsc+mumps+superlu-dist+complex~hdf5
@@ -21,8 +21,8 @@ spack:
 
   container:
     images:
-      os: "ubuntu:22.04"
-      spack: develop
+      os: "ubuntu:24.04"
+      spack: latest
 
     format: docker
 

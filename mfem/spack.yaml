@@ -1,6 +1,6 @@
 spack:
   specs:
-  - python@3.10.16
+  - python@:3.10.99
   - mfem@develop+mpi+petsc+mumps+suite-sparse+superlu-dist+gslib+shared~static
   - mumps+mpi+metis+parmetis
   - mpich@:4.1.99 datatype-engine=dataloop
@@ -17,8 +17,8 @@ spack:
 
   container:
     images:
-      os: "ubuntu:22.04"
-      spack: develop
+      os: "ubuntu:24.04"
+      spack: latest
 
     format: docker
 

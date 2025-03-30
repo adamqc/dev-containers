@@ -1,5 +1,5 @@
 # Build stage with Spack pre-installed and ready to be used
-FROM spack/ubuntu-jammy:develop AS builder
+FROM spack/ubuntu-noble:latest AS builder
 
 
 # What we want to install and how we want to install it
@@ -11,7 +11,7 @@ set -o noclobber \
 &&   echo '  - cmake' \
 &&   echo '  - dealii@master+complex+mpi+petsc+p4est+python+trilinos~hdf5~gmsh~sundials~oce~cgal~assimp~symengine~examples~ginkgo~threads~vtk~opencascade' \
 &&   echo '  - eigen' \
-&&   echo '  - python@3.10.16' \
+&&   echo '  - python@:3.10.99' \
 &&   echo '  - mumps+mpi+metis+parmetis' \
 &&   echo '  - mpich@:4.1.99 datatype-engine=dataloop' \
 &&   echo '  - petsc+mumps+superlu-dist+complex~hdf5' \
@@ -47,7 +47,7 @@ RUN cd /opt/spack-environment && \
 
 
 # Bare OS image to run the installed executables
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 COPY --from=builder /opt/spack-environment /opt/spack-environment
 COPY --from=builder /opt/software /opt/software
