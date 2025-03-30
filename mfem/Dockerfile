@@ -1,5 +1,5 @@
 # Build stage with Spack pre-installed and ready to be used
-FROM spack/ubuntu-noble:latest AS builder
+FROM spack/ubuntu-noble:develop AS builder
 
 
 # What we want to install and how we want to install it
@@ -29,13 +29,6 @@ set -o noclobber \
 
 # Install the software, remove unnecessary deps
 RUN cd /opt/spack-environment && spack env activate . && spack install --fail-fast && spack gc -y
-
-# Strip all the binaries
-RUN find -L /opt/views/view/* -type f -exec readlink -f '{}' \; | \
-    xargs file -i | \
-    grep 'charset=binary' | \
-    grep 'x-executable\|x-archive\|x-sharedlib' | \
-    awk -F: '{print $1}' | xargs strip
 
 # Modifications to the environment that are necessary to run
 RUN cd /opt/spack-environment && \

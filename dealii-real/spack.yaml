@@ -22,11 +22,11 @@ spack:
   container:
     images:
       os: "ubuntu:24.04"
-      spack: latest
+      spack: develop
 
     format: docker
 
-    strip: true
+    strip: false
 
     os_packages:
       final:
